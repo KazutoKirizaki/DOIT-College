@@ -1,0 +1,322 @@
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, var(--red-dark), #2a0f0f);
+  border-bottom: 2px solid var(--gold-main);
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+   .logo-link, .header-text-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.header-text-link:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.logo-link:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 20px;
+  background: hsl(0, 100%, 28%);
+  color: white;
+  margin-top: 20px;
+}
+
+/* =====================================================
+   ROOT VARIABLES – EASY COLOR CUSTOMIZATION
+===================================================== */
+:root {
+  --red-dark: #7b0f0f;
+  --red-main: #c62828;
+  --gold-main: #f5c16c;
+  --gold-soft: #e0d3b8;
+  --bg-dark: #120808;
+
+
+  /* Red & Gold IT Accents */
+  --accent-red: #c62828;
+  --accent-red-glow: rgba(198, 40, 40, 0.5);
+  --accent-gold: #f5c16c;
+
+  --text-main: #f4f4f4;
+  --text-muted: #d0bfa3;
+}
+
+
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =====================================================
+   BODY + IT GRID BACKGROUND
+===================================================== */
+body {
+  min-height: 100vh;
+  color: var(--text-main);
+  background: radial-gradient(circle at top, #1a0f0f, var(--bg-dark));
+  overflow-x: hidden;
+}
+
+/* Animated tech grid */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 215, 160, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 215, 160, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: -1;
+  animation: gridMove 25s linear infinite;
+}
+
+@keyframes gridMove {
+  from { background-position: 0 0, 0 0; }
+  to   { background-position: 500px 500px, 500px 500px; }
+}
+
+/* =====================================================
+   LAYOUT CONTAINER
+===================================================== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+/* =====================================================
+   HERO FLEX SECTION
+===================================================== */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* =====================================================
+   GLOBAL IT THEME COLORS
+===================================================== */
+:root {
+  --red-dark: #7b0f0f;
+  --red-main: #c62828;
+  --gold-main: #f5c16c;
+  --gold-soft: #e0d3b8;
+  --bg-dark: #120808;
+}
+
+/* Base */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(135deg, #120808, #1a0f0f);
+  color: var(--gold-soft);
+}
+
+/* =====================================================
+   REMOVE HYPERLINK LOOK (IMPORTANT)
+===================================================== */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: var(--gold-main);
+}
+
+/* =====================================================
+   HEADER (FLEX)
+===================================================== */
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, var(--red-dark), #2a0f0f);
+  border-bottom: 2px solid var(--gold-main);
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+/* Header text */
+.header-text h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--gold-main);
+  letter-spacing: 1px;
+}
+
+.header-text h3 {
+  margin: 0;
+  font-size: .85rem;
+  font-weight: normal;
+  color: var(--gold-soft);
+}
+
+/* =====================================================
+   NAVIGATION BAR (FLEX)
+===================================================== */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  padding: .8rem;
+  background: #1a0f0f;
+  border-bottom: 1px solid rgba(245,193,108,.25);
+}
+
+/* Nav links */
+nav a {
+  padding: .5rem 1rem;
+  border-radius: 20px;
+  font-size: .9rem;
+  color: var(--gold-soft);
+  transition: background .3s ease, color .3s ease;
+}
+
+/* Hover effect */
+nav a:hover {
+  background: var(--red-main);
+  color: #fff;
+}
+
+/* =====================================================
+   CONTAINER / PAGE LAYOUT
+===================================================== */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+}
+
+
+/* =====================================================
+   HEXAGON PROFILE PICTURE
+===================================================== */
+.hex-wrap {
+  width: 180px;
+  height: 200px;
+  filter: drop-shadow(0 0 20px var(--accent-red-glow));
+}
+
+.hex {
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--accent-red), var(--accent-gold));
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+}
+
+.hex img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+}
+
+
+/* =====================================================
+   OPPORTUNITY CARDS GRID
+===================================================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+/* Individual Card */
+.card {
+  background: var(--bg-card);
+  padding: 1.8rem 1.6rem 2rem;
+  border-radius: 18px;
+  border: 1px solid rgba(245, 193, 108, 0.25);
+  position: relative;
+  overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* Glow sweep */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(198,40,40,.25), transparent);
+  transform: translateX(-100%);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(198,40,40,.35);
+}
+
+.card:hover::before {
+  transform: translateX(100%);
+  transition: transform .8s ease;
+}
+
+.card h2 {
+  color: var(--accent-gold);
+  margin-bottom: .8rem;
+}
+
+.card ul {
+  list-style: none;
+  line-height: 1.6;
+}
+
+.card li::before {
+  content: "▸";
+  color: var(--accent-red);
+  margin-right: .5rem;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    gap: .6rem;
+  }
+
+  .course-box {
+    max-width: 100%;
+  }
+}
+

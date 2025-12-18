@@ -1,0 +1,222 @@
+/* =====================================================
+   GLOBAL IT THEME COLORS
+===================================================== */
+:root {
+  --red-dark: #7b0f0f;
+  --red-main: #c62828;
+  --gold-main: #f5c16c;
+  --gold-soft: #e0d3b8;
+  --bg-dark: #120808;
+}
+
+/* =====================================================
+   BASE
+===================================================== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(135deg, #120808, #1a0f0f);
+  color: var(--gold-soft);
+}
+
+/* Remove hyperlink look */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =====================================================
+   HEADER (FLEX)
+===================================================== */
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, var(--red-dark), #2a0f0f);
+  border-bottom: 2px solid var(--gold-main);
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+/* Header text */
+.header-text h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--gold-main);
+  letter-spacing: 1px;
+}
+
+.header-text h3 {
+  margin: 0;
+  font-size: .85rem;
+  font-weight: normal;
+  color: var(--gold-soft);
+}
+
+/* =====================================================
+   NAVIGATION BAR
+===================================================== */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  padding: .8rem;
+  background: #1a0f0f;
+  border-bottom: 1px solid rgba(245,193,108,.25);
+}
+
+nav a {
+  padding: .5rem 1rem;
+  border-radius: 20px;
+  font-size: .9rem;
+  transition: background .3s ease, color .3s ease;
+}
+
+nav a:hover {
+  background: var(--red-main);
+  color: #fff;
+}
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+}
+
+/* =====================================================
+   COURSES HEADER
+===================================================== */
+.courses-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.courses-header h1 {
+  color: var(--gold-main);
+  font-size: 2.3rem;
+}
+
+.courses-header p {
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* =====================================================
+   COURSES FLEX GRID
+===================================================== */
+/* =====================================================
+   COURSES FLEX (VERTICAL STACK)
+===================================================== */
+.courses-flex {
+  display: flex;
+  flex-direction: column; /* STACK CARDS VERTICALLY */
+  gap: 1.8rem;
+}
+
+/* =====================================================
+   COURSE CARD
+===================================================== */
+.course-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(145deg, #1a0f0f, #120808);
+  padding: 1.8rem;
+  border-radius: 14px;
+  border-left: 5px solid var(--red-main);
+  position: relative;
+  min-height: 170px;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* Glow outline */
+.course-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  border: 1px solid rgba(245,193,108,.15);
+  pointer-events: none;
+}
+
+/* Hover */
+.course-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.45);
+}
+
+/* =====================================================
+   HORIZONTAL CONTENT (ICON + TEXT)
+===================================================== */
+.course-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+/* Icon */
+.course-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+/* Text */
+.course-content h2 {
+  margin: 0 0 .4rem;
+  font-size: 1.1rem;
+  color: var(--gold-main);
+}
+
+.course-content p {
+  margin: 0;
+  font-size: .95rem;
+  line-height: 1.5;
+  color: var(--gold-soft);
+}
+
+/* =====================================================
+   BUTTON (BOTTOM RIGHT)
+===================================================== */
+.course-action {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.2rem;
+}
+
+.course-btn {
+  padding: .45rem 1.3rem;
+  font-size: .85rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--red-main), #8b1c1c);
+  color: #fff;
+  border: 1px solid rgba(245,193,108,.4);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.course-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,.4);
+  background: linear-gradient(135deg, #d32f2f, var(--red-main));
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 600px) {
+  .course-row {
+    flex-direction: column;
+  }
+
+  .course-action {
+    justify-content: center;
+  }
+}

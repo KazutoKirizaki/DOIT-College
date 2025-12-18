@@ -1,0 +1,166 @@
+body {
+
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+
+    background: #f4f4f4;
+}
+
+header {
+
+    background: hsl(0, 100%, 28%);
+
+    color: white;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.logo {
+
+    width: 90px;
+
+    height: auto;
+}
+   .logo-link, .header-text-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.header-text-link:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.logo-link:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+header a {
+    display: flex;
+    align-items: center;
+}
+
+
+
+nav {
+
+    background: #6f0000;
+
+    padding: 10px;
+
+    text-align: center;
+}
+
+nav a {
+
+    color: rgb(7, 7, 7);
+
+    margin: 0 15px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 8px 10px;
+
+    background: rgb(242, 255, 104);
+
+    border-radius: 5px;
+
+    transition: all 0.25s ease;
+}
+
+nav a:hover {
+
+    background: #f1f97d;
+
+    transform: translateY(-3px);
+}
+
+.hero {
+
+    background: url('banner2.jpg') no-repeat center center/cover;
+
+    height: 350px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    font-size: 2rem;
+
+    font-weight: bold;
+
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+section {
+
+    padding: 40px;
+
+    max-width: 1100px;
+
+    margin: 19px;
+
+    background: rgb(255, 255, 255);
+
+    margin-top: 20px;
+
+    border-radius: 10px;
+}
+
+.nav-overview {background-color: #87c3ff;}
+
+.nav-careers {background-color: #87c3ff;}
+.nav-contant {background-color: #87c3ff;}
+
+h2 {
+
+    color: #003366;
+}
+
+.footer {
+
+    text-align: center;
+
+    padding: 20px;
+
+    background: hsl(0, 100%, 28%);
+
+    color: white;
+
+    margin-top: 20px;
+}
+
+.nav-home {background:#cc0000;color:white;}
+
+.nav-home:hover {background:#ff3333;}
+
+.nav-about {background:#00458a;color:white;}
+
+.nav-about:hover {background:#0055aa;}
+
+.nav-courses {background:#008b00;color:white;}
+
+.nav-courses:hover {background:#00aa00;}
+
+.nav-contact {background:#820082;color:white;}
+
+.nav-contact:hover {background:#cc00cc;}
+
+.nav-menu {background:#dab900;color:white;}
+
+.nav-menu:hover {background:#ffcc33;}

@@ -1,0 +1,20 @@
+header {
+ 
+    display: flex;
+ 
+    align-items: center;
+ 
+    gap: 20px;
+}
+
+.logo {
+ 
+    width: 90px;
+ 
+    height: auto;
+}
+
+.header-text h1, .header-text h3 {
+ 
+    margin: 0;
+}
